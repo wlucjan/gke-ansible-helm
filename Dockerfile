@@ -12,4 +12,5 @@ RUN apk add --update --no-cache curl ca-certificates python3 ansible=${ANSIBLE_V
     chmod +x /usr/bin/helm && \
     rm -rf linux-amd64 && \
     apk del curl && \
-    rm -f /var/cache/apk/*
+    rm -f /var/cache/apk/* && \
+    gcloud components install kubectl
